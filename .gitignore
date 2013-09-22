@@ -1,0 +1,11 @@
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
+/nbproject/*
+/web/css/compiled/*
+/web/js/compiled/*
+/composer.phar
+
