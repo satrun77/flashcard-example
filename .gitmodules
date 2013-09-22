@@ -1,0 +1,3 @@
+[submodule "src/Moo/FlashCardBundle"]
+	path = src/Moo/FlashCardBundle
+	url = git@github.com:satrun77/MooFlashCardBundle

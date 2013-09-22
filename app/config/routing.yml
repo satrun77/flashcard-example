@@ -1,0 +1,2 @@
+moo_flashcard:
+    resource: "@MooFlashCardBundle/Resources/config/routing.yml"
