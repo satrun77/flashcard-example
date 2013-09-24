@@ -8,4 +8,6 @@
 /web/css/compiled/*
 /web/js/compiled/*
 /composer.phar
-
+/web/js/*
+/web/fonts/*
+/web/css/*

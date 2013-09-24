@@ -1,5 +1,6 @@
 imports:
     - { resource: config_dev.yml }
+    - { resource: "@MooFlashCardBundle/Resources/config/config_test.yml" }
 
 framework:
     test: ~
@@ -14,7 +15,7 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
-    
-doctrine:
-    dbal:
-        dbname: symfony_testdb
+#    
+#doctrine:
+#    dbal:
+#        dbname: symfony_testdb
