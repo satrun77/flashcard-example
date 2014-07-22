@@ -4,7 +4,7 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.yml
-/nbproject/*
+/nbproject
 /web/css/compiled/*
 /web/js/compiled/*
 /composer.phar
@@ -12,6 +12,7 @@
 /web/fonts/*
 /web/css/*
 /build/
+/bin/
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /composer.lock
