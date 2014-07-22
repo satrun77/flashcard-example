@@ -11,3 +11,7 @@
 /web/js/*
 /web/fonts/*
 /web/css/*
+/build/
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/composer.lock
