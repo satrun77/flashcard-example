@@ -16,15 +16,17 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Moo\FlashCardBundle\MooFlashCardBundle(),
 
+            // MooFlashCardBundle
             new FOS\RestBundle\FOSRestBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+            new Moo\FlashCardBundle\MooFlashCardBundle(),
 
+            // MooFlashCardAdminBundle
+            new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
@@ -32,7 +34,6 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-
             new Moo\FlashCardAdminBundle\MooFlashCardAdminBundle(),
         );
 
@@ -43,7 +44,7 @@ class AppKernel extends Kernel
 
             $bundles[] =new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle();
             $bundles[] =new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
-            $bundles[] =new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
+//            $bundles[] =new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
         }
 
         return $bundles;
