@@ -3,7 +3,9 @@ imports:
 
 #framework:
 #    validation:
-#        cache: apc
+#        cache: validator.mapping.cache.apc
+#    serializer:
+#        cache: serializer.mapping.cache.apc
 
 #doctrine:
 #    orm:
@@ -19,13 +21,8 @@ monolog:
             handler:      nested
         nested:
             type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
-    
-doctrine:
-    dbal:
-        host:     %prod_dbhost%
-        port:     %prod_dbport%
-        dbname:   %prod_dbname%
-        user:     %prod_dbuser%
-        password: %prod_dbpass%
+        console:
+            type:  console
+ 

@@ -1,0 +1,22 @@
+{% extends 'MooFlashCardBundle::base.html.twig' %}
+
+{% block metas %}
+{% endblock metas %}
+
+{% block title %}
+{{ status_code }} {{ status_text }} - {{ parent() }}
+{% endblock title %}
+
+{% block body %}
+{% if status_code == 404 %}
+    <h3 class="page-header">Oops! What you are looking for cannot be found.</h3>
+    <div class="alert alert-info">
+        {{ exception.message|nl2br|format_file_from_text }}
+    </div>
+{% else %}
+    <h3 class="page-header">Oops! An Error Occurred</h3>
+    <div class="alert alert-info">
+        Something is broken. Please try again later, or <a href="http://my.geek.nz/contact/">contact us</a> regard this error.
+    </div>
+{% endif %}
+{% endblock %}
