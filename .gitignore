@@ -16,3 +16,4 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /composer.lock
+.idea/
