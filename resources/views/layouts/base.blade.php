@@ -11,6 +11,9 @@
     <title>@yield('title', 'Moo FlashCard')</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
+    <script type="text/javascript">
+        var BASE_URL = '{!! url()->to('/') !!}';
+    </script>
     <script src="{{ mix('js/app.js') }}" async></script>
     <meta name="description" content="@yield('meta_description', 'Collection of flash cards containing information about different topics in programming. Knowledge base for information collected on different programming topics.')" />
 </head>

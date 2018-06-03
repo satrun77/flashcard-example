@@ -4,7 +4,7 @@ export default class Model extends BaseModel {
 
     // define a base url for a REST API
     baseURL () {
-        return '/api'
+        return BASE_URL + '/api'
     }
 
     // implement a default request method
