@@ -23,4 +23,11 @@ let mix = require('laravel-mix');
 
 mix
     .js('resources/assets/js/app.js', 'public/js')
-    .stylus('resources/assets/sass/app.styl', 'public/css');
+    .stylus('resources/assets/sass/app.styl', 'public/css')
+    .webpackConfig({
+        resolve: {
+            alias: {
+                'vue$': mix.inProduction() ? 'vue/dist/vue.min.js' : 'vue/dist/vue.js',
+            },
+        },
+    });
