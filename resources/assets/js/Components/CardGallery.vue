@@ -84,11 +84,13 @@
             filterByCategory(category) {
                 this.initial = true;
                 this.category = category;
+                this.page = 1;
                 this.setData();
             },
             filterByKeyword(keyword) {
                 this.initial = true;
                 this.keyword = keyword;
+                this.page = 1;
                 this.setData();
             },
             loadData() {
