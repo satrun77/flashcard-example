@@ -116,9 +116,7 @@
         computed: {
             form() {
                 if (this.card && this.card.title !== undefined) {
-                    this.data = {
-                        ...this.card,
-                    }
+                    return new Form(this.card);
                 }
                 return new Form(this.data);
             }

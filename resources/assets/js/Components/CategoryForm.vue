@@ -144,9 +144,7 @@
         computed: {
             form() {
                 if (this.category && this.category.title !== undefined) {
-                    this.data = {
-                        ...this.category,
-                    }
+                    return new Form(this.category);
                 }
                 return new Form(this.data);
             },
