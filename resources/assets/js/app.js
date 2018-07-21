@@ -13,12 +13,17 @@ import Vuetify from 'vuetify'
 import { Model } from 'vue-api-query'
 import Event from './event-bus'
 const SocialSharing = require('vue-social-sharing');
+const LRU = require('lru-cache')
 
 // inject global axios instance as http client to Model
 Model.$http = axios
 
 Vue.use(SocialSharing);
 
+const themeCache = LRU({
+    max: 10,
+    maxAge: 1000 * 60 * 60 // 1 hour
+})
 Vue.use(Vuetify, {
     theme: {
         cyan: '#00B8D4',
@@ -35,6 +40,14 @@ Vue.use(Vuetify, {
         primary: '#2c3e50',
         secondary: '#34495e',
         accent: '#9b59b6'
+    },
+    options: {
+        minifyTheme: function (css) {
+            return process.env.NODE_ENV === 'production'
+                ? css.replace(/[\s|\r\n|\r|\n]/g, '')
+                : css
+        },
+        themeCache
     }
 })
 
